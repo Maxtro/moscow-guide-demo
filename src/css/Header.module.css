@@ -1,0 +1,138 @@
+.header{
+    position: fixed;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    padding: 10px;
+    width: 100%;
+    height: 50px;
+    background-color: #2167d2;
+    text-align: center;
+    line-height: 50px;
+    z-index:1000;
+}
+
+.header  input{
+    width: 400px;
+    height: 27px;
+    padding-left: 10px;
+    border: 0;
+    border-radius: 15px;
+    outline: none !important;
+}
+
+.findButton {
+    position: relative;
+    background-color: white;
+    border: none;
+    color: #2167d2;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    border-radius: 15px;
+    outline: none !important;
+    margin-left: 10px;
+    top: 1px;
+}
+
+.findButton:active {
+    background-color: #90b5d9;
+    border: none;
+    color: #2167d2;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    border-radius: 15px;
+    outline: none !important;
+}
+
+.favorites{
+    /* display: inline-block; */
+    padding-right: 40px;
+    float: right;
+    color: white;
+}
+
+.home {
+    position: relative;
+    padding-left: 20px; 
+    float: left;
+    top: 5px;
+}
+
+.homeSmall {
+    display: none;
+}
+
+@media screen and (max-width: 1000px){
+    .header{ 
+        grid-template-columns: 20px 3fr 0px;
+    }
+
+    .home {
+        display: none;
+    }
+    .favoriteText{
+        display: none;
+    }
+
+    .favorites{
+        padding-right: 5px;
+    }
+    .header  input{
+        width: 250px;
+    }
+
+    .findButton {
+        margin-left: 5px;
+        padding-left: 8px;
+        text-align: center;
+    }
+
+    .findButton :active {
+        margin-left: 5px;
+        padding-left: 8px;
+        text-align: center;
+    }
+
+    .homeSmall {
+        position: relative;
+        left: 5px;
+        top: 3px;
+        display: block;
+    }
+    
+    .header{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+}
+
+
+@media screen and (max-width: 420px){
+    .header  input{
+        width: 160px;
+    }
+
+    .findButton {
+        margin-left: 5px;
+        width: 45px;
+        padding-left: 5px;
+        text-align: center;
+        font-size: 10px;
+    }
+
+    .findButton:active {
+        margin-left: 5px;
+        width: 45px;
+        padding-left: 5px;
+        text-align: center;
+        font-size: 10px;
+    }
+
+    
+}

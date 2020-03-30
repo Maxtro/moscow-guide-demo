@@ -1,0 +1,66 @@
+.place{
+    padding-top: 90px;
+    display: grid;
+    grid-template-columns: minmax(450px, 800px) ;
+    gap: 1em;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.placeCard{
+    display: grid;
+    height: auto;
+    grid-template-columns: 0.7fr 2fr;
+    padding: 1em;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow:  0px 2px 3px #bec0c1;
+    vertical-align: top;
+}
+
+.placeCardImg {
+    width: 300px;
+}
+
+.categoriText{
+    font-size: 10px;
+    color: gray;
+}
+.adressText{
+    font-size: 13px;
+    color: gray;
+    padding-bottom: 10px;
+}
+
+.ymaps{
+    grid-column: 1/3;
+    width: 100%;
+    height: 300px;
+    padding-top: 30px;
+}
+
+.button {
+    border-radius: 20px;
+    border: 0px;
+    width: 100px;
+    height: 30px;
+    font-size: 13px;
+    background-color: #0067ce;
+    color: white;
+    float: left;
+    outline: none !important;
+}
+
+.button:active{
+    border-radius: 20px;
+    border: 0px;
+    width: 100px;
+    height: 30px;
+    font-size: 13px;
+    background-color: #5498d9;
+    color: white;
+    float: center;
+    outline: none !important;
+}
+
+

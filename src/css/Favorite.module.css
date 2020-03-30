@@ -1,0 +1,110 @@
+.favorite{
+    padding-top: 0px;
+    display: grid;
+    grid-template-columns: 450px 450px;
+    gap: 1em;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.favoriteHeader{
+    text-align: center;
+    color: black;
+    padding-top: 70px;
+
+}
+
+.favoriteCard{
+    position: relative;
+    display: grid;
+    height: auto;
+    grid-template-columns: 1.3fr 2fr;
+    padding: 1em;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow:  0px 2px 3px #bec0c1;
+    vertical-align: top;
+    opacity: 0;
+    top: 20px;
+} 
+
+.buttonBox{
+    justify-content: center;
+    align-self: center;  
+}
+
+.box{
+    
+    margin-top: 0;
+    padding-top: 0;
+    
+}
+
+p{
+    margin-top: 5px;
+}
+
+.button {
+    border-radius: 20px;
+    border: 0px;
+    width: 100px;
+    height: 30px;
+    font-size: 13px;
+    background-color: #0067ce;
+    color: white;
+    float: center;
+
+    outline: none !important;
+}
+
+.button:active{
+    border-radius: 20px;
+    border: 0px;
+    width: 100px;
+    height: 30px;
+    font-size: 13px;
+    background-color: #5498d9;
+    color: white;
+    float: center;
+    outline: none !important;
+}
+
+.categoriText{
+    font-size: 10px;
+    color: gray;
+}
+.adressText{
+    font-size: 13px;
+    color: gray;
+}
+
+@media screen and (max-width: 1000px){
+    .favorite{
+        grid-template-columns: repeat(auto-fill, minmax(320px, 450px));
+    }
+
+    .button {
+        border-radius: 20px;
+        border: 0px;
+        width: 70px;
+        height: 30px;
+        font-size: 11px;
+        background-color: #0067ce;
+        color: white;
+        float: center;
+    
+        outline: none !important;
+    }
+    
+    .button:active{
+        border-radius: 20px;
+        border: 0px;
+        width: 70px;
+        height: 30px;
+        font-size: 11px;
+        background-color: #5498d9;
+        color: white;
+        float: center;
+        outline: none !important;
+    }
+}
