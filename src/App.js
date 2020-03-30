@@ -11,8 +11,8 @@ const App = () => {
   return ( 
     <div>
       <HeaderContainer />
-      <Route path='/place/:placeId' render={ SuspenseComponent(DetailPlaceContainer) } />
       <Route exact path='/' render={() => <ResultContainer />} />
+      <Route path='/place/:placeId' render={ SuspenseComponent(DetailPlaceContainer) } />
       <Route path='/favorites' render={ SuspenseComponent(FavoriteContainer) }/>
     </div>
   );
