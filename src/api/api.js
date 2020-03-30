@@ -11,7 +11,7 @@ const client = {
 export const resultsAPI = {
 
     getResults(query = '') {
-        return instance.get(`search?near=Moscow&query=${query}&v=20150214&m=foursquare&${client.clientCode}&limit=50`)
+        return instance.get(`search?near=Moscow&query=${encodeURIComponent(query)}&v=20150214&m=foursquare&${client.clientCode}&limit=50`)
     },
 
     getDetailPlace(placeId) {
