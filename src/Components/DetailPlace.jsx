@@ -5,10 +5,10 @@ import { YMaps, Map, Placemark } from 'react-yandex-maps'
 import { Redirect } from 'react-router-dom'
 import cogoToast from 'cogo-toast'
 
-const DetailPlace = ({ isLoading, detailPlace, isRedirect, changeFavorite }) => {
+const DetailPlace = ({ isLoading, detailPlace, isRedirect, saveFavorite }) => {
 
  let onSaveInFavorite = (favorite) => {
-    changeFavorite(favorite)
+    saveFavorite(favorite)
     cogoToast.success('Добавлено в избранное', {position: 'bottom-center'});
   }
 
