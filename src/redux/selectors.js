@@ -26,6 +26,6 @@ export const getDetailPlace = (state) => {
     return state.placeResult.placeDetail
 }
 
-export const getChangeFavorite = (state) => {
+export const getSaveFavorite = (state) => {
     return state.favorite.changeFavorite
 }
