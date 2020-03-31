@@ -4,7 +4,6 @@ import { getPlacesPopular } from './placesReducer'
 let SET_FAVORITE_PLACE = 'favorite/SET_FAVORITE_PLACE'
 let GET_FAVORITE_PLACE = 'favorite/GET_FAVORITE_PLACE'
 
-
 let initialState = {
     favoritePlace: [],
 }
