@@ -1,3 +1,3 @@
-## Moscow Guide app is React JS code for demonstration only
+## Moscow Guide app is React JS code only for demonstration
 
 
