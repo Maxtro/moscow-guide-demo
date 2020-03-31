@@ -10,22 +10,18 @@ export const getTextHeader = (state) => {
     return state.placeResult.textHeader
 }
 
-export const getFavoriteArrayLength = (state) => {
-    return state.favorite.favoritePlace.length
-}
-
 export const getIsRedirect = (state) => {
     return state.placeResult.isRedirect
-}
-
-export const getFavoritePlaces = (state) => {
-    return state.favorite.favoritePlace
 }
 
 export const getDetailPlace = (state) => {
     return state.placeResult.placeDetail
 }
 
-export const getSaveFavorite = (state) => {
-    return state.favorite.saveFavorite
+export const getFavoriteArrayLength = (state) => {
+    return state.favorite.favoritePlace.length
+}
+
+export const getFavoritePlaces = (state) => {
+    return state.favorite.favoritePlace
 }

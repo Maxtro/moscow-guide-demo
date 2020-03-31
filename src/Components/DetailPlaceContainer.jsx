@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import { saveFavorite } from '../redux/favoriteReducer'
 import { compose } from 'redux'
-import { getDetailPlace, getIsLoading, getSaveFavorite, getIsRedirect } from './../redux/selectors'
+import { getDetailPlace, getIsLoading, getIsRedirect } from './../redux/selectors'
 
 const DetailPlaceContainer = (props) => {
 
@@ -25,7 +25,6 @@ let mapStateToProps = (state) => {
     return {
         detailPlace: getDetailPlace(state),
         isLoading: getIsLoading(state),
-        saveFavorite: getSaveFavorite(state),
         isRedirect: getIsRedirect(state)
     }
 }
