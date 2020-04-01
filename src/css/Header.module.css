@@ -11,46 +11,58 @@
     z-index:1000;
 }
 
-.header  input{
+form {
+    position: relative;
     width: 400px;
-    height: 27px;
+    margin: 0 auto;
+}
+
+input{
+    width: 100%;
+    height: 42px;
     padding-left: 10px;
-    border: 0;
-    border-radius: 15px;
+    border: 2px solid white;
+    border-radius: 20px;
+    outline: none;
+    background: white;
+    color: #9E9C9C;
     outline: none !important;
 }
 
 .findButton {
-    position: relative;
-    background-color: white;
-    border: none;
-    color: #2167d2;
-    padding: 5px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 13px;
-    border-radius: 15px;
+    position: absolute; 
+    top: 6px;
+    right: 0px;
+    width: 42px;
+    height: 42px;
+    border: 2px solid white;
+    background: #2167d2;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
     outline: none !important;
-    margin-left: 10px;
-    top: 1px;
 }
 
+.findButton:before {
+    content: "\f002";
+    font-family: FontAwesome;
+    font-size: 16px;
+    color: white;
+  }
+
 .findButton:active {
-    background-color: #90b5d9;
-    border: none;
-    color: #2167d2;
-    padding: 5px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 13px;
-    border-radius: 15px;
+    position: absolute; 
+    top: 6px;
+    right: 0px;
+    width: 42px;
+    height: 42px;
+    border: 2px solid white;
+    background: #90b5d9;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
     outline: none !important;
 }
 
 .favorites{
-    /* display: inline-block; */
     padding-right: 40px;
     float: right;
     color: white;
@@ -60,7 +72,7 @@
     position: relative;
     padding-left: 20px; 
     float: left;
-    top: 5px;
+    top: 0px;
 }
 
 .homeSmall {
@@ -82,21 +94,6 @@
     .favorites{
         padding-right: 5px;
     }
-    .header  input{
-        width: 250px;
-    }
-
-    .findButton {
-        margin-left: 5px;
-        padding-left: 8px;
-        text-align: center;
-    }
-
-    .findButton :active {
-        margin-left: 5px;
-        padding-left: 8px;
-        text-align: center;
-    }
 
     .homeSmall {
         position: relative;
@@ -113,26 +110,10 @@
 }
 
 
-@media screen and (max-width: 420px){
-    .header  input{
-        width: 160px;
+@media screen and (max-width:500px){
+    form {
+        position: relative;
+        width: 200px;
+        margin: 0 auto;
     }
-
-    .findButton {
-        margin-left: 5px;
-        width: 45px;
-        padding-left: 5px;
-        text-align: center;
-        font-size: 10px;
-    }
-
-    .findButton:active {
-        margin-left: 5px;
-        width: 45px;
-        padding-left: 5px;
-        text-align: center;
-        font-size: 10px;
-    }
-
-    
 }

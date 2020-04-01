@@ -20,8 +20,8 @@ const Header = (props) => {
                 </NavLink>
                 <div>
                     <form onSubmit={props.handleSubmit}>
-                    <Field autoFocus={true} placeholder='Найти...' component={'input'} name={'query'} />
-                    <button className={style.findButton} >Искать</button>
+                    <Field autoFocus={true} placeholder='Найти...' component={'input'} type={'search'} name={'query'} />
+                    <button className={style.findButton} type='submit' ></button>
                     </form>
                 </div>
                 <NavLink to={'/favorites'}>
