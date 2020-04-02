@@ -25,7 +25,10 @@ const Header = (props) => {
                     </form>
                 </div>
                 <NavLink to={'/favorites'}>
-                    <div className={style.favorites} ><b><span className={style.favoriteText}>Избранное:</span> <span className={style.favoriteNuber}>{props.favorite}</span></b></div>
+                    <div className={style.favorites} >
+                        <b><span className={style.favoriteText}>Избранное: {props.favorite}</span> </b>
+                        <span className={ style.favoriteIcon }><b>{props.favorite}</b></span>
+                    </div>
                 </NavLink>
             </div>
 

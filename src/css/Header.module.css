@@ -13,6 +13,7 @@
 
 form {
     position: relative;
+    left: -10px;
     top: 5px;
     width: 400px;
     margin: 0 auto;
@@ -71,6 +72,20 @@ input{
     color: white;
 }
 
+.favoriteIcon{
+    padding-right: 40px;
+    float: right;
+    display: none;
+}
+
+.favoriteIcon:before{
+    padding: 4px;
+    content: "\f004";
+    font-family: FontAwesome;
+    font-size: 18px;
+    color:white;
+}
+
 .home {
     position: relative;
     padding-left: 20px; 
@@ -96,6 +111,11 @@ input{
 
     .favorites{
         padding-right: 5px;
+    }
+
+    .favoriteIcon{
+        padding-right: 3px;
+        display: block;
     }
 
     .homeSmall {
