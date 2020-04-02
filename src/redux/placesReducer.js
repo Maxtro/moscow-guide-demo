@@ -56,20 +56,28 @@ export const getPlacesPopular = (query, redirect) => async (dispatch) => {
         dispatch(setHeaderText(''))
         dispatch(setIsLoading(true))
         dispatch(setRedirect(redirect))
+        try{
         let response =  await resultsAPI.getResults(query)
             dispatch(setPlacesResult(response.data.response.venues))
             dispatch(setIsLoading(false))
             response.data.response.venues.length === 0 ? dispatch(setHeaderText('НИЧЕГО НЕ НАЙДЕНО')) : dispatch(setHeaderText('ВОТ ЧТО УДАЛОСЬ НАЙТИ'))
             if (response.data.response.venues.length !== 0 && query === '') dispatch(setHeaderText('ПОПУЛЯРНЫЕ МЕСТА'))
             dispatch(setRedirect(false))
+        } catch(error){
+            alert('Что-то пошло не так!')
+        }
     }
 
 
 export const getPlaceDetail = (placeId) => async (dispatch) => {
         dispatch(setIsLoading(true))
+        try{
         let response = await resultsAPI.getDetailPlace(placeId)
             dispatch(setDetailPlace(response.data.response.venue))
             dispatch(setIsLoading(false))
+        } catch(error){
+            alert('Что-то пошло не так!')
+        }
     }
 
 

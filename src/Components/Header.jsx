@@ -4,8 +4,17 @@ import { NavLink } from 'react-router-dom'
 import homeImg from '../img/home.png'
 import homeSmall from '../img/home_small.png'
 import { Field } from 'redux-form'
+import { useEffect } from 'react'
+import { TweenMax } from "gsap"
+import { useRef } from 'react'
 
 const Header = (props) => {
+
+    let favorite = useRef()
+
+    useEffect(() => {
+        if (props.favorite) TweenMax.to(favorite.current, .09, {scale: 1.1, yoyo: 1, repeat: 1})
+    }, [props.favorite])
 
         return <>
 
@@ -25,7 +34,7 @@ const Header = (props) => {
                     </form>
                 </div>
                 <NavLink to={'/favorites'}>
-                    <div className={style.favorites} >
+                    <div className={style.favorites} ref={div => favorite.current = div}>
                         <b><span className={style.favoriteText}>Избранное: {props.favorite}</span> </b>
                         <span className={ style.favoriteIcon }><b>{props.favorite}</b></span>
                     </div>
