@@ -1,5 +1,6 @@
 import { favoriteAPI } from '../api/api'
 import { getPlacesPopular } from './placesReducer'
+import cogoToast from 'cogo-toast'
 
 let SET_FAVORITE_PLACE = 'favorite/SET_FAVORITE_PLACE'
 let GET_FAVORITE_PLACE = 'favorite/GET_FAVORITE_PLACE'
@@ -33,14 +34,18 @@ export const saveFavorite = (favorite) => {
     return (dispatch) => {
         let favoriteArray = []
         favoriteAPI.getFavorite() ? favoriteArray = favoriteAPI.getFavorite() : favoriteArray = []
-
         if (favorite === '') {
             dispatch(setFavoritePlace(favoriteArray))
         } else {
-            favoriteArray.push(favorite)
-            favoriteAPI.setFavorite(favoriteArray)
-            favoriteArray = favoriteAPI.getFavorite()
-            dispatch(setFavoritePlace(favoriteArray))
+            if(favoriteArray.find(f => f.id === favorite.id) === undefined){
+                favoriteArray.push(favorite)
+                favoriteAPI.setFavorite(favoriteArray)
+                favoriteArray = favoriteAPI.getFavorite()
+                dispatch(setFavoritePlace(favoriteArray))
+                cogoToast.success('Добавлено в избранное', { position: 'bottom-center' })
+            }else{
+                cogoToast.error('Уже находится в избранном', { position: 'bottom-center' })
+            }
         }
     }
 }

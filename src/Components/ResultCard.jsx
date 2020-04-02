@@ -47,7 +47,6 @@ const ResultCard = ({ places, saveFavorite, deleteFavorite, task, placeIndex }) 
 
     const onSaveInFavorite = (favorite) => {
         saveFavorite(favorite)
-        cogoToast.success('Добавлено в избранное', { position: 'bottom-center' });
     }
 
     return <div className={style.resultCard} >

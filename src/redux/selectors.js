@@ -25,3 +25,4 @@ export const getFavoriteArrayLength = (state) => {
 export const getFavoritePlaces = (state) => {
     return state.favorite.favoritePlace
 }
+
