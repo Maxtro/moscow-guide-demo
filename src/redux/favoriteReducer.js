@@ -44,7 +44,7 @@ export const saveFavorite = (favorite) => {
                 dispatch(setFavoritePlace(favoriteArray))
                 cogoToast.success('Добавлено в избранное', { position: 'bottom-center' })
             }else{
-                cogoToast.error('Уже находится в избранном', { position: 'bottom-center' })
+                cogoToast.error('Уже есть в избранном', { position: 'bottom-center' })
             }
         }
     }
