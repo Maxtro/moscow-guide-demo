@@ -1,4 +1,5 @@
 import { resultsAPI } from './../api/api'
+import cogoToast from 'cogo-toast'
 
 let SET_PLACES_POPULAR = 'places/SET_PLACES_QUERY'
 let SET_DETAIL_PLACE = 'places/SET_DETAIL_PLACE'
@@ -64,7 +65,7 @@ export const getPlacesPopular = (query, redirect) => async (dispatch) => {
             if (response.data.response.venues.length !== 0 && query === '') dispatch(setHeaderText('ПОПУЛЯРНЫЕ МЕСТА'))
             dispatch(setRedirect(false))
         } catch(error){
-            alert('Что-то пошло не так!')
+            cogoToast.error('Что-то пошло не так!', { position: 'bottom-center' })
         }
     }
 
@@ -76,7 +77,7 @@ export const getPlaceDetail = (placeId) => async (dispatch) => {
             dispatch(setDetailPlace(response.data.response.venue))
             dispatch(setIsLoading(false))
         } catch(error){
-            alert('Что-то пошло не так!')
+            cogoToast.error('Что-то пошло не так!', { position: 'bottom-center' })
         }
     }
 

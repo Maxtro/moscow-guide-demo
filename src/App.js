@@ -4,13 +4,14 @@ import HeaderContainer from './Components/HeaderContainer'
 import ResultContainer from './Components/ResultContainer'
 import DetailPlaceContainer from './Components/DetailPlaceContainer'
 import { Route, Switch } from 'react-router-dom';
+import cogoToast from 'cogo-toast'
 
 const FavoriteContainer = React.lazy(() => import('./Components/FavoriteContainer'));
 
 class App extends React.Component  {
 
    catchAllErrors = (reason, promise) => {
-    alert('Что-то пошло не так!')
+    cogoToast.error('Что-то пошло не так!', { position: 'bottom-center' })
   }
 
   componentDidMount(){

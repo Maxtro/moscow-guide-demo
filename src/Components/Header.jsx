@@ -1,19 +1,21 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import style from '../css/Header.module.css'
 import { NavLink } from 'react-router-dom'
 import homeImg from '../img/home.png'
 import homeSmall from '../img/home_small.png'
 import { Field } from 'redux-form'
-import { useEffect } from 'react'
 import { TweenMax } from "gsap"
-import { useRef } from 'react'
 
 const Header = (props) => {
 
-    let favorite = useRef()
+    let favorite = useRef()  
+    const isMount = useRef(true);
+    const oldProps = useRef(0)
 
     useEffect(() => {
-        if (props.favorite) TweenMax.to(favorite.current, .09, {scale: 1.1, yoyo: 1, repeat: 1})
+        if(!isMount.current) TweenMax.to(favorite.current, .09, {scale: 1.1, yoyo: 1, repeat: 1})
+        if (oldProps.current === props.favorite) oldProps.current = props.favorite
+        if (oldProps.current !== props.favorite) isMount.current = false  
     }, [props.favorite])
 
         return <>
