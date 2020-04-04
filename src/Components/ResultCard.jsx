@@ -42,7 +42,7 @@ const ResultCard = ({ places, saveFavorite, deleteFavorite, task, placeIndex }) 
 
     const onDeleteFavorite = (idPlace) => {
         deleteFavorite(idPlace)
-        cogoToast.warn('Удалено', { position: 'bottom-center' });
+        cogoToast.warn('Удалено', { position: 'top-center' });
     }
 
     const onSaveInFavorite = (favorite) => {

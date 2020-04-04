@@ -38,13 +38,13 @@ export const saveFavorite = (favorite) => {
             dispatch(setFavoritePlace(favoriteArray))
         } else {
             if(favoriteArray.find(f => f.id === favorite.id) === undefined){
-                favoriteArray.push(favorite)
+                favoriteArray.unshift(favorite)
                 favoriteAPI.setFavorite(favoriteArray)
                 favoriteArray = favoriteAPI.getFavorite()
                 dispatch(setFavoritePlace(favoriteArray))
-                cogoToast.success('Добавлено в избранное', { position: 'bottom-center' })
+                cogoToast.success('Добавлено в избранное', { position: 'top-center' })
             }else{
-                cogoToast.error('Уже есть в избранном', { position: 'bottom-center' })
+                cogoToast.error('Уже есть в избранном', { position: 'top-center' })
             }
         }
     }

@@ -65,7 +65,7 @@ export const getPlacesPopular = (query, redirect) => async (dispatch) => {
             if (response.data.response.venues.length !== 0 && query === '') dispatch(setHeaderText('ПОПУЛЯРНЫЕ МЕСТА'))
             dispatch(setRedirect(false))
         } catch(error){
-            cogoToast.error('Что-то пошло не так!', { position: 'bottom-center' })
+            cogoToast.error('Что-то пошло не так!', { position: 'top-center' })
         }
     }
 
@@ -77,7 +77,7 @@ export const getPlaceDetail = (placeId) => async (dispatch) => {
             dispatch(setDetailPlace(response.data.response.venue))
             dispatch(setIsLoading(false))
         } catch(error){
-            cogoToast.error('Что-то пошло не так!', { position: 'bottom-center' })
+            cogoToast.error('Что-то пошло не так!', { position: 'top-center' })
         }
     }
 

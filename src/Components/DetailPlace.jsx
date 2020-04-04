@@ -9,7 +9,7 @@ const DetailPlace = ({ isLoading, detailPlace, isRedirect, saveFavorite }) => {
 
  let onSaveInFavorite = (favorite) => {
     saveFavorite(favorite)
-    cogoToast.success('Добавлено в избранное', {position: 'bottom-center'});
+    cogoToast.success('Добавлено в избранное', {position: 'top-center'});
   }
 
     if (isRedirect) return <Redirect to={'/'} />

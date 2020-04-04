@@ -6,7 +6,7 @@ import homeSmall from '../img/home_small.png'
 import { Field } from 'redux-form'
 import { TweenMax } from "gsap"
 
-const Header = (props) => {
+const Header = React.memo(props => {
 
     let favorite = useRef()  
     const isMount = useRef(true);
@@ -45,6 +45,6 @@ const Header = (props) => {
 
         </>
 
-    }
+    })
 
 export default Header
