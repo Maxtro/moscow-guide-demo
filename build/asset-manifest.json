@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/build/static/css/main.7b61b45f.chunk.css",
-    "main.js": "/build/static/js/main.db92345c.chunk.js",
-    "main.js.map": "/build/static/js/main.db92345c.chunk.js.map",
-    "runtime-main.js": "/build/static/js/runtime-main.12607524.js",
-    "runtime-main.js.map": "/build/static/js/runtime-main.12607524.js.map",
-    "static/js/2.d82bf5d6.chunk.js": "/build/static/js/2.d82bf5d6.chunk.js",
-    "static/js/2.d82bf5d6.chunk.js.map": "/build/static/js/2.d82bf5d6.chunk.js.map",
-    "static/css/3.0b94c618.chunk.css": "/build/static/css/3.0b94c618.chunk.css",
-    "static/js/3.e8c18eb8.chunk.js": "/build/static/js/3.e8c18eb8.chunk.js",
-    "static/js/3.e8c18eb8.chunk.js.map": "/build/static/js/3.e8c18eb8.chunk.js.map",
-    "index.html": "/build/index.html",
-    "precache-manifest.d5a1446834f7996736ebb5ffd05442db.js": "/build/precache-manifest.d5a1446834f7996736ebb5ffd05442db.js",
-    "service-worker.js": "/build/service-worker.js",
-    "static/css/3.0b94c618.chunk.css.map": "/build/static/css/3.0b94c618.chunk.css.map",
-    "static/css/main.7b61b45f.chunk.css.map": "/build/static/css/main.7b61b45f.chunk.css.map",
-    "static/js/2.d82bf5d6.chunk.js.LICENSE.txt": "/build/static/js/2.d82bf5d6.chunk.js.LICENSE.txt",
-    "static/media/loader.svg": "/build/static/media/loader.44b82a76.svg"
+    "main.css": "/moscow-guide-demo/build/static/css/main.7b61b45f.chunk.css",
+    "main.js": "/moscow-guide-demo/build/static/js/main.f1be954e.chunk.js",
+    "main.js.map": "/moscow-guide-demo/build/static/js/main.f1be954e.chunk.js.map",
+    "runtime-main.js": "/moscow-guide-demo/build/static/js/runtime-main.8426f37f.js",
+    "runtime-main.js.map": "/moscow-guide-demo/build/static/js/runtime-main.8426f37f.js.map",
+    "static/js/2.d82bf5d6.chunk.js": "/moscow-guide-demo/build/static/js/2.d82bf5d6.chunk.js",
+    "static/js/2.d82bf5d6.chunk.js.map": "/moscow-guide-demo/build/static/js/2.d82bf5d6.chunk.js.map",
+    "static/css/3.0b94c618.chunk.css": "/moscow-guide-demo/build/static/css/3.0b94c618.chunk.css",
+    "static/js/3.e8c18eb8.chunk.js": "/moscow-guide-demo/build/static/js/3.e8c18eb8.chunk.js",
+    "static/js/3.e8c18eb8.chunk.js.map": "/moscow-guide-demo/build/static/js/3.e8c18eb8.chunk.js.map",
+    "index.html": "/moscow-guide-demo/build/index.html",
+    "precache-manifest.70f880556782bee1f04ef883c0b6c79a.js": "/moscow-guide-demo/build/precache-manifest.70f880556782bee1f04ef883c0b6c79a.js",
+    "service-worker.js": "/moscow-guide-demo/build/service-worker.js",
+    "static/css/3.0b94c618.chunk.css.map": "/moscow-guide-demo/build/static/css/3.0b94c618.chunk.css.map",
+    "static/css/main.7b61b45f.chunk.css.map": "/moscow-guide-demo/build/static/css/main.7b61b45f.chunk.css.map",
+    "static/js/2.d82bf5d6.chunk.js.LICENSE.txt": "/moscow-guide-demo/build/static/js/2.d82bf5d6.chunk.js.LICENSE.txt",
+    "static/media/loader.svg": "/moscow-guide-demo/build/static/media/loader.44b82a76.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.12607524.js",
+    "static/js/runtime-main.8426f37f.js",
     "static/js/2.d82bf5d6.chunk.js",
     "static/css/main.7b61b45f.chunk.css",
-    "static/js/main.db92345c.chunk.js"
+    "static/js/main.f1be954e.chunk.js"
   ]
 }
