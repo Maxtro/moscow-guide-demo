@@ -5,13 +5,16 @@ import favoriteReducer from './favoriteReducer'
 import { reducer as formReducer } from 'redux-form'
 
 
-let redusers = combineReducers({
+let rootReduser = combineReducers({
     placeResult: placesReduser,
     favorite: favoriteReducer,
     form: formReducer,
 })
 
-let store = createStore(redusers, applyMiddleware(thunkMiddleware))
+type ReduserType = typeof rootReduser
+export type StateType = ReturnType<ReduserType>
+
+let store = createStore(rootReduser, applyMiddleware(thunkMiddleware))
 
 export default store
 

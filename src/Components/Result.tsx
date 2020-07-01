@@ -3,11 +3,19 @@ import style from '../css/Result.module.css'
 import Loader from './Loader'
 import { TweenMax } from "gsap"
 import ResultCard from './ResultCard'
+import { placeDetailType } from '../redux/placesReducer'
 
-const Result = ({ isLoading, popularPlaces, saveFavorite, textHeader }) => {
+type PropsType = {
+    isLoading: boolean 
+    popularPlaces: Array<placeDetailType>
+    saveFavorite: (q: string) => void
+    textHeader: string
+}
 
-    let cardElements = useRef([]);
-    let text = useRef()
+const Result: React.FC<PropsType> = ({ isLoading, popularPlaces, saveFavorite, textHeader }) => {
+
+    const cardElements = useRef<any>([]);
+    const text = useRef<any>()
 
     useEffect(() => {
         if (!isLoading) TweenMax.to(text.current, .7, { opacity: 1, delay: 0.4 })
@@ -20,8 +28,8 @@ const Result = ({ isLoading, popularPlaces, saveFavorite, textHeader }) => {
                 <div className={style.resultHeader} ref={div => text.current = div}><h4>{textHeader}</h4></div>
                 <div className={style.result}>
                     {popularPlaces.map((places, index) => {
-                        return <div ref={div => cardElements.current[index] = div} className={style.card} key={places.id}>
-                            <ResultCard places={places} saveFavorite={saveFavorite} task={ 'SAVE' }/>
+                        return <div ref={div => cardElements.current[index] = div} className={style.card} key={index}>
+                            <ResultCard places={places} saveFavorite={saveFavorite} deleteFavorite={null} task={ 'SAVE' } placeIndex={null}/>
                         </div>
                     })}
                 </div>

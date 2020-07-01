@@ -1,15 +1,20 @@
 import { favoriteAPI } from '../api/api'
 import { getPlacesPopular } from './placesReducer'
 import cogoToast from 'cogo-toast'
+import { Dispatch } from 'redux'
 
-let SET_FAVORITE_PLACE = 'favorite/SET_FAVORITE_PLACE'
-let GET_FAVORITE_PLACE = 'favorite/GET_FAVORITE_PLACE'
+let SET_FAVORITE_PLACE: string = 'favorite/SET_FAVORITE_PLACE'
+let GET_FAVORITE_PLACE: string = 'favorite/GET_FAVORITE_PLACE'
 
-let initialState = {
+type initialStateType = {
+    favoritePlace: Array<string>
+}
+
+let initialState: initialStateType = {
     favoritePlace: [],
 }
 
-const favoriteReducer = (state = initialState, action) => {
+const favoriteReducer = (state = initialState, action: ActionType):initialStateType => {
     switch (action.type) {
 
         case SET_FAVORITE_PLACE: {
@@ -26,18 +31,30 @@ const favoriteReducer = (state = initialState, action) => {
 
 }
 
-export const setFavoritePlace = (favorite) => ({ type: SET_FAVORITE_PLACE, newFavorite: favorite })
-export const getFavoritePlace = (favoriteArray) => ({ type: GET_FAVORITE_PLACE, newFavoritePlace: favoriteArray })
+type ActionType = setFavoritePlaceType & getFavoritePlaceType
+type DispatchType = setFavoritePlaceType | getFavoritePlaceType
 
-export const saveFavorite = (favorite) => {
+type setFavoritePlaceType =  {
+    type: typeof SET_FAVORITE_PLACE
+    newFavorite: Array<string>
+}
+export const setFavoritePlace = (favorite: Array<string>):setFavoritePlaceType => ({ type: SET_FAVORITE_PLACE, newFavorite: favorite })
 
-    return (dispatch) => {
+type getFavoritePlaceType = {
+    type: typeof GET_FAVORITE_PLACE
+    newFavoritePlace: Array<string>
+}
+export const getFavoritePlace = (favoriteArray:Array<string>):getFavoritePlaceType => ({ type: GET_FAVORITE_PLACE, newFavoritePlace: favoriteArray })
+
+export const saveFavorite = (favorite: any) => {
+
+    return (dispatch: Dispatch<DispatchType>) => {
         let favoriteArray = []
         favoriteAPI.getFavorite() ? favoriteArray = favoriteAPI.getFavorite() : favoriteArray = []
         if (favorite === '') {
             dispatch(setFavoritePlace(favoriteArray))
         } else {
-            if(favoriteArray.find(f => f.id === favorite.id) === undefined){
+            if(favoriteArray.find((f:any) => f.id === favorite.id) === undefined){
                 favoriteArray.unshift(favorite)
                 favoriteAPI.setFavorite(favoriteArray)
                 favoriteArray = favoriteAPI.getFavorite()
@@ -52,7 +69,7 @@ export const saveFavorite = (favorite) => {
 
 export const getFavorite = () => {
 
-    return (dispatch) => {
+    return (dispatch: Dispatch<DispatchType>) => {
         let newFavoriteArray = []
         favoriteAPI.getFavorite() ? newFavoriteArray = favoriteAPI.getFavorite() : newFavoriteArray = []
         dispatch(getFavoritePlace(newFavoriteArray))
@@ -62,9 +79,9 @@ export const getFavorite = () => {
     }
 }
 
-export const deleteFavorite = (idPlace) => {
+export const deleteFavorite = (idPlace: string) => {
 
-    return (dispatch) => {
+    return (dispatch: Dispatch<DispatchType>) => {
         let deleteArray = []
         favoriteAPI.getFavorite() ? deleteArray = favoriteAPI.getFavorite() : deleteArray = []
         deleteArray.splice(idPlace, 1)
